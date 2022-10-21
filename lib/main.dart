@@ -13,24 +13,27 @@ class Splash extends StatelessWidget {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
-            image: DecorationImage(
-                fit:BoxFit.fill,
-                image: NetworkImage(
-                    "https://i.pinimg.com/originals/3b/ef/27/3bef27693c812b4762a9f363231ad5d2.jpg"))),
+          image: DecorationImage(
+              fit: BoxFit.fill,
+              image: NetworkImage(
+                  "https://mir-s3-cdn-cf.behance.net/project_modules/disp/15549a14589707.5628669c64769.png")),
+        ),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               ///fetching image from asset way 1
-              Image(
-                image: AssetImage("assets/images/climatechange.png"),
-                height: 100,
-                width: 100,
+              Image.asset(
+                "assets/images/food.png",
+                height: 200,
+                width: 200,
               ),
 
               ///fetching image from asset way 2
-              //Image.asset("assets/images/climatechange.png"),
-              Text("MYAPP", style: TextStyle(fontSize: 40, color: Colors.orange)),
+              //const Image(image: AssetImage("assets/images/food.png")),
+
+              const Text("MYAPP",
+                  style: TextStyle(fontSize: 40, color: Colors.orange)),
             ],
           ),
         ),
