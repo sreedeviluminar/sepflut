@@ -6,6 +6,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: const Text("LoginPage"),
+          centerTitle: true,
         ),
         body: SingleChildScrollView(
           child: Column(
