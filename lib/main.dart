@@ -1,17 +1,16 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:sepflut/Home.dart';
+import 'package:sepflut/login.dart';
 
 void main() {
   runApp(MaterialApp(
     theme: ThemeData(primarySwatch: Colors.pink),
-    debugShowCheckedModeBanner: false,
     home: Splash(),
+    debugShowCheckedModeBanner: false,
   ));
 }
 
-class Splash extends StatefulWidget {
+class Splash extends StatefulWidget{
   @override
   State<Splash> createState() => _SplashState();
 }
@@ -22,8 +21,7 @@ class _SplashState extends State<Splash> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 5), () {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => HomePage()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
     });
   }
 
@@ -47,10 +45,8 @@ class _SplashState extends State<Splash> {
                 height: 200,
                 width: 200,
               ),
-
               ///fetching image from asset way 2
               //const Image(image: AssetImage("assets/images/food.png")),
-
               const Text("MYAPP",
                   style: TextStyle(fontSize: 40, color: Colors.orange)),
             ],
@@ -58,5 +54,6 @@ class _SplashState extends State<Splash> {
         ),
       ),
     );
+
   }
 }
