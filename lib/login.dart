@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'mainscreen.dart';
 
 class HomePage extends StatelessWidget {
@@ -28,14 +27,14 @@ class HomePage extends StatelessWidget {
                       label: Text("UserName"),
                       hintText: "UserName must be your email",
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                        borderRadius: BorderRadius.all(Radius.circular(80)),
                       )),
                 ),
               ),
               const Padding(
                 padding: EdgeInsets.all(15.0),
                 child: TextField(
-                  obscuringCharacter: "*",
+                 // obscuringCharacter: "*",
                   obscureText: true,
                   decoration: InputDecoration(
                       prefixIcon: Icon(Icons.password) ,
@@ -54,7 +53,7 @@ class HomePage extends StatelessWidget {
                     child: const Text("LOGIN")),
               ),
               TextButton(
-                  onPressed: () {},
+                  onPressed: () { },
                   child: const Text("Not a User? Register Here!!!1"))
             ],
           ),

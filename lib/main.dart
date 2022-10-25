@@ -14,17 +14,16 @@ class Splash extends StatefulWidget{
   @override
   State<Splash> createState() => _SplashState();
 }
-
 class _SplashState extends State<Splash> {
 
   @override
   void initState() {
     super.initState();
+
     Timer(const Duration(seconds: 5), () {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
     });
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
