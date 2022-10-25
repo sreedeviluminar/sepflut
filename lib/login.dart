@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 import 'mainscreen.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+
+  bool viewenable = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,15 +39,25 @@ class HomePage extends StatelessWidget {
                       )),
                 ),
               ),
-              const Padding(
+               Padding(
                 padding: EdgeInsets.all(15.0),
                 child: TextField(
                  // obscuringCharacter: "*",
-                  obscureText: true,
-                  decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.password) ,
-                      label: Text("Password"),
-                      border: OutlineInputBorder(
+                  obscureText: viewenable , // true
+                  decoration:  InputDecoration(
+                      suffixIcon: IconButton(onPressed: (){
+                        setState(() {
+                          if(viewenable){ //viewenable = true
+                            viewenable = false;
+                          }else{
+                            viewenable = true;
+                          }
+                        });
+                      }, icon: Icon(viewenable == true? Icons.remove_red_eye : Icons.visibility_off)),
+
+                      prefixIcon: const Icon(Icons.password) ,
+                      label: const Text("Password"),
+                      border: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(20)),
                       )),
                 ),
