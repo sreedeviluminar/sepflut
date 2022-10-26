@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:sepflut/login.dart';
+import 'package:sepflut/login_with_validation.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -15,13 +16,14 @@ class Splash extends StatefulWidget{
   State<Splash> createState() => _SplashState();
 }
 class _SplashState extends State<Splash> {
+  final scaffoldkey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
 
-    Timer(const Duration(seconds: 5), () {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
+    Timer(const Duration(seconds: 2), () {
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginValidation()));
     });
   }
   @override
