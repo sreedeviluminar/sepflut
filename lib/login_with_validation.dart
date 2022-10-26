@@ -1,38 +1,37 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sepflut/mainscreen.dart';
 
-class LoginValidation extends StatelessWidget {
-
+class Login_with_Validation extends StatelessWidget {
   var formkey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("LOGIN PAGE"),
+      ),
       body: Form(
         key: formkey,
         child: ListView(
           children: [
             const Padding(
-              padding: EdgeInsets.only(top: 30),
+              padding: EdgeInsets.only(top: 20),
               child: Center(
                   child: Text(
                 "Login Page",
-                style: TextStyle(fontSize: 40),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
               )),
             ),
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: TextFormField(
                 decoration: const InputDecoration(
-                  labelText: "UserName",
-                    border: OutlineInputBorder()
-                ),
-                validator: (text) {
-                  if(text!.isEmpty || !(text.contains('@') )){
-                       return 'Enter a valid email address';
-                } else{
-                     return null;
+                    labelText: "UserName", border: OutlineInputBorder()),
+                validator: (email) {
+                  if (email!.isEmpty || !email.contains("@")) {
+                    return "Enter a valid email !!!";
+                  } else {
+                    return null;
                   }
                 },
               ),
@@ -42,27 +41,32 @@ class LoginValidation extends StatelessWidget {
               child: TextFormField(
                 decoration: const InputDecoration(
                     labelText: "Password",
-                    border: OutlineInputBorder()
-                ),
-                validator:(text){
-                   if(text!.length < 6 || text.isEmpty){
-                     return 'Password  length should be greater than 6 / should not be null';
-                   }else{
-                     return null;
-                   }
-                } ,
+                   border: OutlineInputBorder(
+                       borderRadius: BorderRadius.all(Radius.circular(20)),)),
+                validator: (password) {
+                  if (password!.isEmpty || password.length < 6) {
+                    return "Password length should be greater than 6";
+                  } else {
+                    return null;
+                  }
+                },
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: ElevatedButton(onPressed: () {
-                final isValid = formkey.currentState!.validate();
-                if(isValid){
-                  Navigator.push(context, MaterialPageRoute(builder:(context) =>MainScreen() ));
-                }else{
-                  print("invalid data");
-                }
-              }, child: Text("Login")),
+              padding: const EdgeInsets.only(left: 40.0, right: 40),
+              child: ElevatedButton(
+                  onPressed: () {
+                    final valid = formkey.currentState!.validate();
+                    if (valid) {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MainScreen()));
+                    } else {
+                      print("Login Failure");
+                    }
+                  },
+                  child: const Text("LOGIN")),
             )
           ],
         ),

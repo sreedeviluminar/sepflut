@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'mainscreen.dart';
 
+void main(){
+  runApp(MaterialApp(home: HomePage(),));
+}
 class HomePage extends StatefulWidget {
   @override
   State<HomePage> createState() => _HomePageState();
@@ -12,6 +15,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    Navigator.pop(context);
+
     return Scaffold(
         appBar: AppBar(
           title: const Text("LoginPage",),
@@ -45,15 +50,16 @@ class _HomePageState extends State<HomePage> {
                  // obscuringCharacter: "*",
                   obscureText: viewenable , // true
                   decoration:  InputDecoration(
-                      suffixIcon: IconButton(onPressed: (){
-                        setState(() {
-                          if(viewenable){ //viewenable = true
-                            viewenable = false;
-                          }else{
-                            viewenable = true;
-                          }
-                        });
-                      }, icon: Icon(viewenable == true? Icons.remove_red_eye : Icons.visibility_off)),
+                      suffixIcon: IconButton(
+                          onPressed: (){
+                             setState(() {
+                               if(viewenable){
+                                 viewenable = false;
+                               }else{
+                                 viewenable = true;
+                               }
+                             });
+                      }, icon: Icon(viewenable == true? Icons.visibility_off : Icons.visibility)),
 
                       prefixIcon: const Icon(Icons.password) ,
                       label: const Text("Password"),
@@ -75,6 +81,7 @@ class _HomePageState extends State<HomePage> {
                   child: const Text("Not a User? Register Here!!!1"))
             ],
           ),
-        ));
+        ),
+        );
   }
 }
