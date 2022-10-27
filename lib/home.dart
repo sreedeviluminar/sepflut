@@ -6,46 +6,40 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("List Page"),
+        title: const Text("MyList"),
       ),
       body: ListView(
         children: [
-          const SizedBox(
+          const SizedBox /**/ (
             height: 20,
           ),
           const Center(
               child: Text(
             "List of Fruits",
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
           )),
+
           const ListTile(
-            title: Text("Rainu"),
-            subtitle: Text("0987765428"),
-            leading: CircleAvatar(
-                backgroundImage: NetworkImage(
-                    "https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80")),
+            title: Text("Deepesh "),
+            subtitle: Text("0987657654"),
+            leading: CircleAvatar(backgroundImage: NetworkImage("https://post.healthline.com/wp-content/uploads/2021/05/mango-bowl-fruit-1296x728-body.jpg")),
             trailing: Icon(Icons.phone),
           ),
-          const SizedBox(
-            height: 20,
+          ListTile(
+            title: const Text("Fruits1 "),
+            subtitle: const Text("Fruits are Yummy"),
+            leading: Image.asset("assets/images/food.png"),
           ),
           ListTile(
-            title: const Text("Fruit 1"),
-            subtitle: Text("Fruits are Yummy"),
+            title: const Text("Fruits1 "),
+            subtitle: const Text("Fruits are Yummy"),
             leading: Image.asset("assets/images/food.png"),
-            trailing: Icon(Icons.navigate_next),
           ),
+          Divider(thickness: 2,color: Colors.pink,),
           ListTile(
-            title: const Text("Fruit 1"),
-            subtitle: Text("Fruits are Yummy"),
+            title: const Text("Fruits1 "),
+            subtitle: const Text("Fruits are Yummy"),
             leading: Image.asset("assets/images/food.png"),
-            trailing: Icon(Icons.navigate_next),
-          ),
-          ListTile(
-            title: const Text("Fruit 1"),
-            subtitle: Text("Fruits are Yummy"),
-            leading: Image.asset("assets/images/food.png"),
-            trailing: Icon(Icons.navigate_next),
           ),
         ],
       ),
