@@ -22,7 +22,7 @@ class _SplashState extends State<Splash> {
   void initState() {
     super.initState();
 
-    Timer(const Duration(seconds: 2), () {
+    Timer(const Duration(seconds: 10), () {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Login_with_Validation()));
     });
   }
@@ -38,7 +38,7 @@ class _SplashState extends State<Splash> {
         ),
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+           mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ///fetching image from asset way 1
               Image.asset(
