@@ -1,15 +1,22 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:sepflut/home.dart';
+import 'login.dart';
 
-class Login_with_Validation extends StatelessWidget {
+void main(){
+  runApp(MaterialApp(home: Register(),));
+}
+class Register extends StatelessWidget {
+
   var formkey = GlobalKey<FormState>();
+  TextEditingController pass   = TextEditingController();
+  TextEditingController cpass  = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("LOGIN PAGE"),
+        title: const Text("REGISTRATION PAGE"),
       ),
       body: Form(
         key: formkey,
@@ -19,9 +26,9 @@ class Login_with_Validation extends StatelessWidget {
               padding: EdgeInsets.only(top: 20),
               child: Center(
                   child: Text(
-                "Login Page",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-              )),
+                    "REGISTRATION PAGE",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                  )),
             ),
             Padding(
               padding: const EdgeInsets.all(20.0),
@@ -35,19 +42,38 @@ class Login_with_Validation extends StatelessWidget {
                     return null;
                   }
                 },
-              textInputAction: TextInputAction.next,
+                textInputAction: TextInputAction.next,
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: TextFormField(
+                controller: pass,
                 decoration: const InputDecoration(
                     labelText: "Password",
-                   border: OutlineInputBorder(
-                       borderRadius: BorderRadius.all(Radius.circular(20)),)),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20)),)),
                 validator: (password) {
                   if (password!.isEmpty || password.length < 6) {
                     return "Password length should be greater than 6";
+                  } else {
+                    return null;
+                  }
+                },
+                textInputAction: TextInputAction.next,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: TextFormField(
+                controller: cpass,
+                decoration: const InputDecoration(
+                    labelText: "Confirm Password",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20)),)),
+                validator: (password) {
+                  if (password!.isEmpty || password.length < 6 || pass.text != cpass.text) {
+                    return "Password should be same";
                   } else {
                     return null;
                   }
@@ -61,10 +87,17 @@ class Login_with_Validation extends StatelessWidget {
                   onPressed: () {
                     final valid = formkey.currentState!.validate();
                     if (valid) {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => MainScreen()));
+                      ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: const Text('Registration Successful'),
+                            action: SnackBarAction(
+                              label: 'Undo',
+                              onPressed: () {
+                                // Code to execute.
+                              },
+                            ),
+                          ),
+                      );
                     } else {
                       Fluttertoast.showToast(
                           msg: "Invalid username / Password",
@@ -76,7 +109,7 @@ class Login_with_Validation extends StatelessWidget {
                       );
                     }
                   },
-                  child: const Text("LOGIN")),
+                  child: const Text("Register here")),
             )
           ],
         ),
