@@ -31,14 +31,15 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text("Flutter GridView"),
         ),
         body: GridView.extent(
-          maxCrossAxisExtent: 90,
+          maxCrossAxisExtent: 100,
           crossAxisSpacing: 10,
           mainAxisSpacing: 10,
           padding: EdgeInsets.all(10),
-          shrinkWrap: true,
           children: [
             Container(
               color: Colors.green,
+              width: 150,
+              height: 150,
             ),
             Container(
               color: Colors.red,
