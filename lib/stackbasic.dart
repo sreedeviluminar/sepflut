@@ -17,26 +17,26 @@ class StackEx extends StatelessWidget {
         child: Stack(
           children: [
             Container(
-              width: 500,
-              height: 500,
-              color: Colors.yellow,
+              color: Colors.green,
+              width: 400,
+              height: 400,
             ),
             Positioned(
-              top: 30,
-              right: 40,
+              right: 30,
+              bottom: 30,
               child: Container(
-                width: 100,
-                height: 100,
-                color: Colors.red,
+                color: Colors.yellow,
+                width: 80,
+                height: 80,
               ),
             ),
             Positioned(
-              left: 40,
-              bottom: 30,
+              left: 30,
+              top: 30,
               child: Container(
-                width: 100,
+                color: Colors.pink,
                 height: 100,
-                color: Colors.green,
+                width: 100,
               ),
             ),
           ],

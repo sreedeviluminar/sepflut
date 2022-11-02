@@ -36,7 +36,7 @@ class GridViewww extends StatelessWidget {
                     image: NetworkImage('https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'),
                     fit: BoxFit.cover,
                   ),
-                  borderRadius: BorderRadius.all(Radius.circular(10.0),),
+                  borderRadius: BorderRadius.all(Radius.circular(100.0),),
                 ),
               ),
             );

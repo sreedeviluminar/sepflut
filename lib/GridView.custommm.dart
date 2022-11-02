@@ -46,12 +46,12 @@ class _MyHomePageState extends State<MyHomePage> {
             crossAxisCount: 2,
           ),
           childrenDelegate: SliverChildBuilderDelegate(
-            (BuildContext, index) {
+            (context, index) {
               return Image.asset(
                 images[index],
                 width: 50,
                 height:50 ,
-                fit: BoxFit.fill,
+               // fit: BoxFit.fill,
               );
             },
             childCount: 8,
