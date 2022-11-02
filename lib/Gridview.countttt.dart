@@ -12,16 +12,15 @@ class GridViewww extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blueGrey[900],
-          title: const Center(
-            child: Text(
-              'GridView ',
-              style: TextStyle(
-                color: Colors.blueAccent,
-                fontWeight: FontWeight.bold,
-                fontSize: 30.0,
-              ),
+          title: const Text(
+            'GridView ',
+            style: TextStyle(
+              color: Colors.blueAccent,
+              fontWeight: FontWeight.bold,
+              fontSize: 30.0,
             ),
           ),
+          centerTitle: true,
         ),
         body: GridView.count(
           crossAxisCount: 4,
