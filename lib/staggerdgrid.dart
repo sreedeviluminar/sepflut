@@ -34,7 +34,6 @@ class StaggerdGridddd extends StatelessWidget {
     BackGroundTile(backgroundColor: Colors.yellowAccent, icondata: Icons.adjust_rounded),
     BackGroundTile(backgroundColor: Colors.deepOrange, icondata: Icons.attach_money),
   ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,12 +49,10 @@ class StaggerdGridddd extends StatelessWidget {
     );
   }
 }
-
 class BackGroundTile extends StatelessWidget {
 
   final Color? backgroundColor;
   final IconData icondata;
-
    BackGroundTile({ this.backgroundColor, required this.icondata});
 
   @override

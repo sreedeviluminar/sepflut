@@ -2,19 +2,19 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyTable());
+  runApp(MaterialApp(home :MyTable()));
 }
 
 class MyTable extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: DataTable(
+    return Scaffold(
+        body: DataTable(
         columns: const <DataColumn>[
           DataColumn(
-          label: Text(
-            'Name',
+            label: Text(
+             'Name',
             style: TextStyle(fontStyle: FontStyle.italic),
           ),
         ),
@@ -36,7 +36,7 @@ class MyTable extends StatelessWidget {
           cells: <DataCell>[
             DataCell(Text('Sarah')),
             DataCell(Text('19')),
-            DataCell(Text('Student')),
+            DataCell(Text('')),
           ],
         ),
         DataRow(
