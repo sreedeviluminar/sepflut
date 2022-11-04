@@ -12,7 +12,7 @@ class List_With_Builder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
    return Scaffold(
-      appBar: AppBar(title: Text("List2")),
+     // appBar: AppBar(title: Text("List2")),
       body: ListView.builder(
          itemCount: datas.length,
          itemBuilder: (BuildContext cntx ,int index){

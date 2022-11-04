@@ -9,6 +9,8 @@ void main(){
 class StaggerdGridddd extends StatelessWidget {
 
   final List<StaggeredTile>  _cardTile =const <StaggeredTile> [
+    StaggeredTile.count(2, 2),
+    StaggeredTile.count(2, 1),
     StaggeredTile.count(2, 3),
     StaggeredTile.count(2, 2),
     StaggeredTile.count(2, 3),
@@ -16,9 +18,7 @@ class StaggerdGridddd extends StatelessWidget {
     StaggeredTile.count(2, 3),
     StaggeredTile.count(2, 2),
     StaggeredTile.count(2, 3),
-    StaggeredTile.count(2, 2),
     StaggeredTile.count(2, 3),
-    StaggeredTile.count(2, 2),
   ];
 
 //List of Cards with color and icon
@@ -34,26 +34,27 @@ class StaggerdGridddd extends StatelessWidget {
     BackGroundTile(backgroundColor: Colors.yellowAccent, icondata: Icons.adjust_rounded),
     BackGroundTile(backgroundColor: Colors.deepOrange, icondata: Icons.attach_money),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       body: Container(
-         child: StaggeredGridView.count(
-           crossAxisCount: 4,
-           staggeredTiles: _cardTile,
-           mainAxisSpacing: 4,
-           crossAxisSpacing: 4,
-           children: _listTile,
-         ),
+       body: StaggeredGridView.count(
+         crossAxisCount: 4,
+         staggeredTiles: _cardTile,
+         mainAxisSpacing: 4,
+         crossAxisSpacing: 4,
+         children: _listTile,
        ),
     );
   }
 }
+
 class BackGroundTile extends StatelessWidget {
 
   final Color? backgroundColor;
   final IconData icondata;
-   BackGroundTile({ this.backgroundColor, required this.icondata});
+
+  BackGroundTile({ this.backgroundColor, required this.icondata});
 
   @override
   Widget build(BuildContext context) {

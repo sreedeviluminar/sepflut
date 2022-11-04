@@ -14,9 +14,9 @@ class ListWithSeparated extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("MyList"),
-        ),
+        // appBar: AppBar(
+        //   title: const Text("MyList"),
+        // ),
         body: ListView.separated(
             itemBuilder: (context, index) {
               return Card(
@@ -28,6 +28,7 @@ class ListWithSeparated extends StatelessWidget {
               );
             },
             separatorBuilder: (context, index) {
+
               return Icon(
                 Icons.account_tree,
                 color: Colors.green[sepcolors[index]],
