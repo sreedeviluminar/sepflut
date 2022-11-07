@@ -35,25 +35,24 @@ class HomePage extends StatelessWidget {
           title: Text("MyTab"),
           actions: [
             Icon(Icons.search),
-            PopupMenuButton(
-                itemBuilder: (context){
-              return[
-                const PopupMenuItem(child: Text("Settings")),
-                const PopupMenuItem(child: Text("Help")),
-                const PopupMenuItem(child: Text("About")),
-                const PopupMenuItem(child: Text("Version"))
-              ];
-            })
+             PopupMenuButton(itemBuilder: (context){
+               return [
+                 const  PopupMenuItem(child: Text("Settings")),
+                 const  PopupMenuItem(child: Text("Version")),
+                 const  PopupMenuItem(child: Text("Help")),
+                 const  PopupMenuItem(child: Text("About"))
+               ];
+             })
           ],
-          backgroundColor: Color(0xffffcd56),
+          backgroundColor: Color(0xff003425),
           bottom: const TabBar(
-            indicatorSize: TabBarIndicatorSize.tab,
             tabs: [
               Tab(
-                iconMargin:EdgeInsets.all(100),
-                icon: Icon(Icons.camera_alt),
+                iconMargin:EdgeInsets.only(left: 2),
+                icon: Icon(Icons.camera_alt,size: 20,),
               ),
               Tab(
+              //  height: 10,
                 icon: Icon(Icons.home_filled),
                 text: "Home",
               ),
@@ -65,14 +64,14 @@ class HomePage extends StatelessWidget {
                 icon: Icon(Icons.alarm),
                 text: "Alarm",
               ),
-            ],
-          ),
-        ),
+            ],),),
         body:  TabBarView(
           children: [
             List_With_Builder(),
             ListWithSeparated(),
             GridNormal(),
+            GridNormal(),
+
             // Center(
             //   child: Icon(Icons.home),
             // ),

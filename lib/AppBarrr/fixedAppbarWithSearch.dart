@@ -19,7 +19,6 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatefulWidget {
-
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -31,8 +30,8 @@ class _HomePageState extends State<HomePage> {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-             floating: true,
-             pinned: true,
+            floating: true,
+            pinned: true,
             title: Text('CustomAppBar'),
             actions: [
               IconButton(
@@ -62,8 +61,7 @@ class _HomePageState extends State<HomePage> {
           ),
           // Other Sliver Widgets
           SliverList(
-            delegate: SliverChildListDelegate(
-                [
+            delegate: SliverChildListDelegate([
               const SizedBox(
                 height: 400,
                 child: Center(

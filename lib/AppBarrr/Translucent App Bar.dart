@@ -15,14 +15,14 @@ class CustomAppBar extends StatelessWidget {
             icon: const Icon(Icons.arrow_back),
           ),
           title: const Text('CustomAppBar'),
-          backgroundColor: Colors.purple.withOpacity(0.0),
+          backgroundColor: Colors.purple.withOpacity(.5),
           elevation: 0,
           actions: [
             IconButton(onPressed: () {}, icon: const Icon(Icons.settings))
           ],
         ),
-        body: Image.asset(
-          'assets/images/food.png',
+        body: Image.network(
+           'https://images.pexels.com/photos/589840/pexels-photo-589840.jpeg?auto=compress&cs=tinysrgb&w=600',
           width: double.infinity,
           height: double.infinity,
           fit: BoxFit.cover,
