@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main(){
   runApp(MyApp());
@@ -37,12 +38,12 @@ class _HomeState extends State<Home> {
                           context: context,
                           builder: (context) {
                             return AlertDialog(
-                              title: Text(' Alert Dialog'),
-                              content: Text('Do you really want to delete?'),
+                              title: Text(' Exit !!!!!!!!!!'),
+                              content: Text('Do you really want to exit?'),
                               actions: <Widget>[
                                 TextButton(
                                     onPressed: () {
-                                      Navigator.of(context).pop(true);
+                                      SystemNavigator.pop();
                                     },
                                     child: Text('Yes')),
                                 TextButton(
