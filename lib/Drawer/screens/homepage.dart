@@ -1,9 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'aboutPage.dart';
 import 'otherpage.dart';
-
-
 class HomePagedraw extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -11,6 +10,7 @@ class HomePagedraw extends StatefulWidget {
   }
 }
 class _HomePagedraw extends State<HomePagedraw> {
+
   String mainProfilePic =
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3tX9GUY0RJdxvyvuX0zIx_PHafgmoLdm5Lg&usqp=CAU";
   String otherProfilePic =
@@ -86,7 +86,7 @@ class _HomePagedraw extends State<HomePagedraw> {
                 ListTile(
                   title: Text("Close"),
                   leading: Icon(Icons.cancel),
-                  onTap: () => Navigator.of(context).pop(),
+                  onTap: () => SystemNavigator.pop(),
                 ),
               ],
             ))));
