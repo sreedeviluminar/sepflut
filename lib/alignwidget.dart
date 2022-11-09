@@ -34,11 +34,12 @@ class _MyHomePageState extends State<MyHomePage> {
               width: 240.0,
               color: Colors.blue,
               child: Align(
-                  alignment: Alignment.bottomRight,
-                  child: Image.asset(
-                    "assets/images/apple.png",
-                    width: 100,
-                  )),
+                alignment: Alignment.topCenter,
+                child: Image.asset(
+                  "assets/images/apple.png",
+                  width: 100,
+                ),
+              ),
             )));
   }
 }

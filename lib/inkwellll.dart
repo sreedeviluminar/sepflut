@@ -5,7 +5,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-
 // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -26,8 +25,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-  String inkwell='';
+  String inkwell = '';
 
   @override
   Widget build(BuildContext context) {
@@ -35,12 +33,6 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('InkWell Widget'),
         backgroundColor: Colors.yellow,
-        actions: const <Widget>[
-          Text(
-            '',
-            textScaleFactor: 3,
-          )
-        ],
       ),
       backgroundColor: Colors.lightBlue[50],
       body: Center(
@@ -50,12 +42,12 @@ class _MyHomePageState extends State<MyHomePage> {
             InkWell(
               onTap: () {
                 setState(() {
-                  inkwell='Inkwell Tapped';
+                  inkwell = 'Inkwell Tapped';
                 });
               },
               onLongPress: () {
                 setState(() {
-                  inkwell='InkWell Long Pressed';
+                  inkwell = 'InkWell Long Pressed';
                 });
               },
               child: Container(
@@ -64,15 +56,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: 70,
                   child: const Center(
                       child: Text(
-                        'Inkwell',
-                        textScaleFactor: 2,
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ))),
+                    'Inkwell',
+                    textScaleFactor: 2,
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ))),
             ),
-
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text(inkwell,textScaleFactor: 2,),
+              child: Text(
+                inkwell,
+                textScaleFactor: 2,
+              ),
             )
           ],
         ),

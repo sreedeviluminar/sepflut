@@ -7,7 +7,8 @@ void main() {
     routes: {
       '/': (context) => firstRoute(),
       '/second': (context) => secondRoute(),
-      '/third' : (context) => thirdRoute(),
+      '/third': (context) => thirdRoute(),
+      //  '/home'  : (context) => Homeeee(),
     },
   ));
 }
@@ -30,7 +31,9 @@ class firstRoute extends StatelessWidget {
                 Navigator.pushNamed(context, '/second');
               },
             ),
-            SizedBox(height: 20,),
+            const SizedBox(
+              height: 20,
+            ),
             ElevatedButton(
               child: const Text('To Third'),
               onPressed: () {
@@ -63,6 +66,7 @@ class secondRoute extends StatelessWidget {
     );
   }
 }
+
 class thirdRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
