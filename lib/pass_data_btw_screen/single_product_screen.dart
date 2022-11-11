@@ -3,8 +3,9 @@ import './dummy_data.dart';
 class SingleProductScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
+    //
     final productId = ModalRoute.of(context)?.settings.arguments;//2
+
     // find the product that matches the id passed from the ProductListScreen
     final product = dummyProducts.firstWhere((e) => e["id"] == productId);
 
@@ -29,8 +30,8 @@ class SingleProductScreen extends StatelessWidget {
           Text("Description ${product['description']}"),
 
          // Image.network(product["image"]),
+         // Image.asset(product["image1"]),
         ]),
-
       ),
     );
   }

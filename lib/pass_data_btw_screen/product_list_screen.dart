@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import './dummy_data.dart';
 
 class ProductListScreen extends StatelessWidget {
@@ -6,7 +7,6 @@ class ProductListScreen extends StatelessWidget {
   void _goToSingle(context, productId) {
     Navigator.of(context).pushNamed("single-product", arguments: productId);
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
