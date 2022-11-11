@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 void main() {
   runApp(MaterialApp(
     home: MyPage(),
@@ -14,6 +13,7 @@ class MyPage extends StatefulWidget {
 class MyPageState extends State with TickerProviderStateMixin {
 
   late AnimationController animationController;
+
   @override
   void initState() {
     super.initState();

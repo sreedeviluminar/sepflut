@@ -24,7 +24,7 @@ class _AnimatedIconExampleState extends State<AnimatedIconExample> with SingleTi
     super.initState();
     _animationController = AnimationController(
       vsync: this, //vsync needs Ticker
-      duration: const Duration(seconds: 1),
+      duration: const Duration(milliseconds: 500),
     );
   }
 

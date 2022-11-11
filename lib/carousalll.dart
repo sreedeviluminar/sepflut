@@ -70,17 +70,18 @@ class CarosalPage extends StatelessWidget {
                 image: NetworkImage("https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"),
                 fit: BoxFit.cover,
               ),),) ],
+
         //Slider Container properties
         options: CarouselOptions(
           height: 250.0,
-          scrollDirection: Axis.vertical,
+        //  scrollDirection: Axis.vertical,
           enlargeCenterPage: true,
           autoPlay: true,
           aspectRatio: 16 / 9,
-          autoPlayCurve: Curves.fastOutSlowIn,
+          autoPlayCurve: Curves.bounceOut,
           enableInfiniteScroll: true,
           autoPlayAnimationDuration: const Duration(milliseconds: 800),
-          viewportFraction: .5,
+          viewportFraction: .8,
         ),
       ),
 
