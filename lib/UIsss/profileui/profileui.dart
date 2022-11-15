@@ -97,7 +97,7 @@ class ProfileUi extends StatelessWidget {
                     style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    '@nishad',
+                    '@Developer',
                     style: TextStyle(fontSize: 13, color: Colors.grey),
                   )
                 ],
