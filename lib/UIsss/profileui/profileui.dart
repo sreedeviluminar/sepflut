@@ -135,7 +135,7 @@ class ProfileUi extends StatelessWidget {
             ),
             Container(
               margin: const EdgeInsets.only(left: 35, right: 35),
-              height: MediaQuery.of(context).size.height * 0.3,
+              height: MediaQuery.of(context).size.height *0.4,
               width: MediaQuery.of(context).size.width * 0.2,
               child: SingleChildScrollView(
                 child: Column(
