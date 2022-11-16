@@ -194,13 +194,16 @@ class ProfileUi extends StatelessWidget {
 }
 
 class ProfileTile extends StatelessWidget {
+
   const ProfileTile({
     Key? key,
     required this.txt,
     required this.icon,
   }) : super(key: key);
+
   final String txt;
   final Icon icon;
+
   @override
   Widget build(BuildContext context) {
     return Container(
