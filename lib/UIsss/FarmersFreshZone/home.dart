@@ -250,7 +250,7 @@ class VegGrid extends StatelessWidget {
                   boxShadow: const [
                     BoxShadow(
                       color: Colors.black,
-                      blurRadius: 10.0,
+                      blurRadius: 20.0,
                     ),
                   ],
                   borderRadius: BorderRadius.circular(10),
