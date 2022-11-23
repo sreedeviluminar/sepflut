@@ -7,12 +7,10 @@ void main() {
     home: Farmer(),
   ));
 }
-
 class Farmer extends StatefulWidget {
   @override
   State<Farmer> createState() => _FarmerState();
 }
-
 class _FarmerState extends State<Farmer> {
   @override
   Widget build(BuildContext context) {
